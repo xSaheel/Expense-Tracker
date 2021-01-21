@@ -1,0 +1,274 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  background-color: #15202b;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.header {
+  letter-spacing: 0.25rem;
+  margin-top: 3.5rem;
+}
+
+.amount {
+  letter-spacing: 0;
+}
+
+.bal-header {
+  margin-top: 0.4rem;
+}
+
+.container {
+  margin: 3rem auto;
+  width: 100%;
+  background-color: #273744;
+  border-radius: 0.6rem;
+  padding: 1.8rem;
+  margin-bottom: 3rem;
+}
+
+.expense-container {
+  background-color: #8899a6;
+  box-shadow: var(--box-shadow);
+  padding: 1.8rem;
+  display: flex;
+  justify-content: space-between;
+  margin: 1.8rem 0;
+  border-radius: 0.4rem;
+}
+
+.gain {
+  color: #30e77d;
+  font-weight: bolder;
+  font-size: 130%;
+  text-align: center;
+}
+
+.loss {
+  color: #c0392b;
+  font-weight: bolder;
+  font-size: 130%;
+  text-align: center;
+}
+
+h4 {
+  margin: 0;
+  text-transform: uppercase;
+}
+
+input[type="text"],
+input[type="number"] {
+  border: none;
+  font-family: "Montserrat", sans-serif;
+  border-radius: 0.2rem;
+  display: block;
+  font-size: 1rem;
+  padding: 0.6rem;
+  height: 2.7rem;
+  width: 100%;
+  background-color: #8899a65d;
+  color: #fff;
+}
+
+input:focus {
+  outline: 0;
+}
+
+::placeholder {
+  color: rgba(255, 255, 255, 0.466);
+}
+
+.form-control {
+  padding: 1.2rem 0 0 0;
+}
+
+.btns {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.4rem;
+}
+
+.minus-btn,
+.add-btn {
+  margin: 0;
+  cursor: pointer;
+  padding: 0.6rem;
+  width: 48%;
+  color: white;
+  font-size: 0.9rem;
+  font-weight: bold;
+  border-radius: 0.4rem;
+  border: none;
+}
+
+.minus-btn,
+.add-btn:focus {
+  outline: 0;
+}
+
+.minus-btn {
+  background-color: #fc1900cb;
+}
+
+.add-btn {
+  background-color: #0ef56ecb;
+}
+
+.minus-btn:hover {
+  background-color: #fc19009f;
+}
+
+.add-btn:hover {
+  background-color: #30e77cad;
+}
+
+.delete-btn {
+  cursor: pointer;
+  background-color: #e93c29;
+  border: 0;
+  height: 101%;
+  width: 8%;
+  color: #ffffffe3;
+  font-size: 1.3rem;
+  padding: 0.4rem;
+  position: absolute;
+  top: 50%;
+  left: 107%;
+  transform: translate(-100%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.btn:focus,
+.delete-btn:focus {
+  outline: 0;
+}
+
+.list li:hover .delete-btn {
+  opacity: 1;
+}
+
+.list {
+  margin-bottom: 1rem;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-gap: 0.5rem;
+  width: 100%;
+}
+
+.list li {
+  background-color: #fffffff6;
+  box-shadow: var(--box-shadow);
+  color: rgb(100, 100, 100);
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  border-radius: 0.2rem;
+  padding: 0.8rem;
+  padding-right: 0.8rem;
+  padding-left: 0.8rem;
+  margin: 0.2rem 0.8rem 0 0;
+  font-weight: 500;
+  letter-spacing: 0.02rem;
+  font-size: 100%;
+  font-family: mukta, sans-serif;
+}
+
+.list li.plus {
+  border-right: 8px solid #2ecc71;
+}
+
+.list li.minus {
+  border-right: 8px solid #c0392b;
+}
+
+.history {
+  margin-bottom: 0.5rem;
+}
+
+.balance {
+  display: flex;
+  justify-content: space-between;
+}
+
+label {
+  display: inline-block;
+  margin: 0.5rem 0;
+  font-weight: 600;
+}
+
+.scrollView {
+  height: 100%;
+  max-height: 13.5rem;
+  overflow-y: scroll;
+  white-space: nowrap;
+}
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 2px grey;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #8899a6;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #6b7881;
+}
+
+.trans {
+  margin-top: 2rem;
+}
+
+.no-trans {
+  font-weight: lighter;
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+h3 {
+  font-size: 130%;
+}
+
+.line {
+  margin-top: 0.5rem;
+  margin-bottom: 0.8rem;
+  width: 100%;
+  height: 0.4px;
+  background: #fff;
+}
+
+.form {
+  margin-top: -0.5rem;
+}
+
+.footer {
+  margin-bottom: 0.5rem;
+  text-align: center;
+  color: #ecf2f7;
+  font-weight: 700;
+  font-size: 90%;
+}
+
+@media (max-width: 320px) {
+  .container {
+    width: 300px;
+  }
+}
